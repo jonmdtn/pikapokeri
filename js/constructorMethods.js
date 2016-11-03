@@ -3,7 +3,7 @@
 
 doubleHand.prototype.initDouble = function(){
     var cardArray = this.cards;
-    $("#doublecardarea").empty().load("doublehand.html");
+    $("#doublecardarea").empty().load("../html/doublehand.html");
     setTimeout(function(){deck.setCard(cardArray, 0);},0); //shows first card
     //setTimeout is used above with a 0ms delay because doublehand.html needs to be loaded.
     //this is needed so that the function is executed after loading doublehand.html
@@ -26,7 +26,7 @@ doubleHand.prototype.initDouble = function(){
 
 standardHand.prototype.initStandard = function(){
     var cardArray = this.openCards.concat(this.firstStack.concat(this.secondStack));
-    $("#normalcardarea").empty().load("standardhand.html");
+    $("#normalcardarea").empty().load("../html/standardhand.html");
     setTimeout(function(){
         for (var i=1; i<=8; i++){
             if ([4,5,7,8].indexOf(i) == -1){deck.setCard(cardArray, (i-1));}
@@ -37,7 +37,7 @@ standardHand.prototype.initStandard = function(){
 }
 
 Deck.prototype.setCard = function(cardArray, index){ //function used to set appropriate cards to images
-    var src = "cards/"+cardArray[index][0]+"/"+cardArray[index][1]+".png", selector = "#card"+(index+1)+" img";
+    var src = "../cards/"+cardArray[index][0]+"/"+cardArray[index][1]+".png", selector = "#card"+(index+1)+" img";
     $(selector).attr("src",src); //sets specified image selector's src property to the selected card's source
 }
 
