@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="jquery-2.2.0.min.js"></script>
+    <script src="constructors.js"></script>
+    <script src="constructorMethods.js"></script>
+    <script src="checkValues.js"></script>
+    <script src="probabilities.js"></script>
+    <script src="game.js"></script>
+</head>
+
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    #doublecardarea{
+        width:760px;
+        height:200px;
+        background-color:blue;
+        display:none;
+    }
+    #normalcardarea{
+        width:760px;
+        height:200px;
+        background-color:green;
+        position:relative;
+        z-index:-100;
+        display:none;
+    }
+    .cardstack{
+        display:inline;
+
+    }
+    .cardstack .understack{
+        margin-left:-112px;
+    }
+    
+    .card{
+        height:200px;
+        width:140px;
+        display:inline;
+        padding-left:10px;
+        position:relative;
+        
+    }
+    .card img{
+        height:200px;
+        width:140px;
+    }
+</style>
+<body>
+
+    <div id = "doublecardarea"></div>
+    
+    <div id = "normalcardarea"></div>
+    <div id="test" style="height:100px;width:100px;background-color:red;"></div>
+    <div id="stand" style="height:100px;width:100px;background-color:yellow;"></div>
+</body>
+
+</html>
